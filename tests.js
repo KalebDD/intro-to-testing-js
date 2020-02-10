@@ -19,16 +19,22 @@ describe('sayHello', function() {
         expect(typeof sayHello).toBe('function');
     })
     it('should return a string when called', function() {
-        expect(typeof sayHello()).toBe('string');
+        expect(typeof sayHello(undefined)).toBe('string');
     })
-    it('sayHello should return Hello, Jane!', function() {
-        expect(sayHello()).toBe("Hello, Jane!");
+    it('an argument of "Jane" should return  Hello, Jane!', function() {
+        expect(sayHello('Jane')).toBe("Hello, Jane!");
     })
     it('an argument of "Alex" should return Hello, Alex!', function() {
         expect(sayHello('Alex')).toBe("Hello, Alex!");
     })
     it('an argument of "Pat" should return Hello, Pat!', function() {
         expect(sayHello('Pat')).toBe("Hello, Pat!");
+    })
+    it('return Hello, World if no argument is provided', function() {
+        expect(sayHello()).toBe('Hello, World!');
+    })
+    it('a boolean argument should return Hello, World!', function() {
+        expect(sayHello(Boolean)).toBe("Hello, World!");
     })
 })
 
