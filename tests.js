@@ -43,5 +43,44 @@ describe('isFive', function() {
     it('should be a defined function', function() {
         expect(typeof isFive).toBe('function');
     });
+    it('should always return a boolean type', function () {
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('an argument of "5" should return true', function() {
+       expect(isFive(5)).toBe(true);
+    });
 });
 
+//Unit test for isEven
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return as boolean', function() {
+       expect(typeof isEven()).toBe('boolean');
+    });
+    it('return true when passed an argument of 2', function() {
+       expect(isEven(2)).toBe(true);
+    });
+    it('return true when passed an argument of -4', function() {
+       expect(isEven(-4)).toBe(true);
+    });
+    it('return false when passed an argument of 3', function() {
+       expect(isEven(3)).toBe(false);
+    });
+    it('return false when passed an argument of "banana"', function() {
+       expect(isEven('banana')).toBe(false);
+    });
+    it('return true when passed an argument of "8"', function() {
+        expect(isEven("8")).toBe(true);
+    });
+    it('return false when passed an argument of Infinity', function() {
+       expect(isEven(Infinity)).toBe(false);
+    });
+    it('return false when passed a boolean argument', function() {
+        expect(isEven(Boolean)).toBe(false);
+    });
+    it('return false when called without an argument', function() {
+       expect(isEven()).toBe(false);
+    });
+});
