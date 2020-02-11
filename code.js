@@ -18,3 +18,7 @@ function isFive(input) {
 function isEven(input) {
     return input % 2 === 0;
 }
+
+function isVowel(input) {
+    return ['a','e','i','o','u','A','E','I','O','U'].indexOf(input) !== -1;
+}
