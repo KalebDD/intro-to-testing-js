@@ -22,3 +22,7 @@ function isEven(input) {
 function isVowel(input) {
     return ['a','e','i','o','u','A','E','I','O','U'].indexOf(input) !== -1;
 }
+
+function add(num1, num2) {
+    return parseFloat(num1) + parseFloat(num2);
+}
